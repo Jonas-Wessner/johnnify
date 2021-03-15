@@ -129,3 +129,32 @@ a{
         font-size: 1.2rem;
     }
 }
+
+
+/* Lists */
+.list{
+    list-style: none;   /* get rid of the default bullet points */
+    padding-left: 0;    /* get rid of the default padding */ 
+    color: var(--color-headings);
+}
+
+.list--inline .list__item{
+    display: inline-block; /* show items in horizontal line but still allow defining margins */
+    margin-right: 2rem;
+}
+
+.list--tick .list__item::before{ /* define the tick */
+    content: "";
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    padding-right: 1rem; /* separate tick from text */
+    background-image: url("images/check.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 2rem;
+}
+
+.list--tick .list__item{
+    margin-bottom: 1rem; /* separate items */
+}
