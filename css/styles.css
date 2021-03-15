@@ -7,6 +7,7 @@
     --color-body: #918ca4;
 }
 
+/* Typography */
 html{
     /* browsers standard for font-size is 16px.
     We multiply this by 0.625 to get 10px and
@@ -53,8 +54,45 @@ p{
     h2{
         font-size: 5rem;
     }
-    
+
     h3{
         font-size: 2.4rem;
+    }
+}
+
+/* Links */
+a{
+    text-decoration: none;
+}
+
+.link-arrow{
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: font-size 0.25s;
+}
+
+.link-arrow::after{
+    content: "-->";
+    margin-left: 0.5rem;
+    transition: margin-left 0.25s;
+}
+
+/* when we hover over the link, the arrow after is shall get modified */
+.link-arrow:hover::after{
+    margin-left: 1rem; /* move arrow 0.5rem to the right */
+}
+
+.link-arrow:hover{
+    font-size: 2.3rem;
+}
+
+@media screen and (min-width: 1024px){
+    .link-arrow{
+        font-size: 1.5rem;
+    }
+    .link-arrow:hover{
+        font-size: 1.8rem;
     }
 }
