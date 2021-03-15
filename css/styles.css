@@ -6,3 +6,55 @@
     --color-headings: #1b0760;
     --color-body: #918ca4;
 }
+
+html{
+    /* browsers standard for font-size is 16px.
+    We multiply this by 0.625 to get 10px and
+    easier calculations for rem-values.
+    If the default font-size in the browser is changed
+    by the user our font-size on this page thus is also increased */
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: var(--color-body);
+    font-size: 2.4rem;
+    line-height: 1.5; /* separate lines by 1.5*font-size */
+}
+
+h1, h2, h3{
+    color: var(--color-headings);
+    margin-bottom: 1rem; /* mostly margin to paragraphs */
+}
+
+h1{
+    size: 7rem; /* translates to 70px is user keeps the default font-size in browser */
+}
+
+h2{
+    size: 4rem;
+}
+
+h3{
+    size: 3rem;
+}
+
+p{
+    margin-top: 0; /* we want to use the margin-bottom of headings */
+}
+
+/* modifications for desktop view */
+@media screen and (min-width: 1024px){
+    h1{
+        font-size: 8rem;
+    }
+
+    h2{
+        font-size: 5rem;
+    }
+    
+    h3{
+        font-size: 2.4rem;
+    }
+}
