@@ -1,13 +1,14 @@
 /* definition of custom variables */
 :root{
     --color-primary: #2584ff;
+    --color-primary-dark: #1f77eb;
     --color-secondary: #00d9ff;
+    --color-secondary-dark: #27cedd;
     --color-accent: #ff3400;
-    --color-primary-darkened: #1f77eb;
-    --color-secondary-darkened: #27cedd;
-    --color-accent-darkened: #ec3000;
+    --color-accent-dark: #ec3000;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    --color-body-dark: #5c5577;
     --color-border: #ccc;
     --border-radius-full: 100000rem; /* set border radius to maximum round corners using a very large value*/
 }
@@ -214,7 +215,7 @@ a{
 
 .btn--primary:hover,
 .btn--primary:focus{
-    background-color: var(--color-primary-darkened);
+    background-color: var(--color-primary-dark);
 }
 
 .btn--secondary{
@@ -224,7 +225,7 @@ a{
 
 .btn--secondary:hover,
 .btn--secondary:focus{
-    background-color: var(--color-secondary-darkened);
+    background-color: var(--color-secondary-dark);
 }
 
 .btn--accent{
@@ -234,7 +235,7 @@ a{
 
 .btn--accent:hover,
 .btn--accent:focus{
-    background-color: var(--color-accent-darkened);
+    background-color: var(--color-accent-dark);
 }
 
 .btn--outline{
@@ -315,7 +316,7 @@ a{
 }
 
 .card--primary .badge--primary{ /* adjust badge-color when used in card to still be visible in the header */
-    background-color: var(--color-primary-darkened);
+    background-color: var(--color-primary-dark);
 }
 
 .card--secondary .card__header{
@@ -324,7 +325,7 @@ a{
 }
 
 .card--secondary .badge--secondary{
-    background-color: var(--color-secondary-darkened);
+    background-color: var(--color-secondary-dark);
 }
 
 /* Plans */
@@ -398,4 +399,41 @@ a{
 
 .media__image{
     margin-top: 1rem;
+}
+
+/* Quotes */
+.quote{
+    color: var(--color-body-dark);
+}
+
+.quote__text{
+    font-size: 3rem;
+    font-style: italic;
+    line-height: 140%;
+}
+
+.quote__text::before{
+    content: open-quote;
+}
+
+.quote__text::after{
+    content: close-quote;
+}
+
+.quote__author{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.quote__organization{
+    color: var(--color-headings);
+    opacity: 0.4;
+    font-size: 2rem;
+}
+
+.quote__line{
+    /* moves the element 0.5rem upwards from its original position */
+    position: relative;
+    bottom: 0.5rem;
 }
