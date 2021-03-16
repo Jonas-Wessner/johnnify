@@ -294,3 +294,26 @@ a{
     border: 0;
     flex-grow: 1; /* grow to take up all remaining space */
 }
+
+/* Cards */
+.card{
+    border-radius: 0.7rem;
+    /* hides overflowing contained element-parts such as the background of the card__header at the edges */
+    overflow: hidden;
+    box-shadow: 0 0 2rem 1rem #f3f3f3; /* offset-h, offset-v, blurring, spreading */
+}
+
+.card__header,
+.card__body{
+    padding: 2rem 3rem;    
+}
+
+.card--primary .card__header{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.card--secondary .card__header{
+    background-color: var(--color-secondary);
+    color: white;
+}
