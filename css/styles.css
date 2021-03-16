@@ -3,8 +3,17 @@
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
     --color-accent: #ff3400;
+    --color-primary-darkened: #1f77eb;
+    --color-secondary-darkened: #00c8db;
+    --color-accent-darkened: #ec3000;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box; /* sizes of elements are calculated including the border size */
 }
 
 /* Typography */
@@ -179,4 +188,70 @@ a{
     justify-content: center;
     width: 6.4rem;
 
+}
+
+/* Buttons */
+.btn{
+    border-radius: 100rem; /* choose a high number for maximum round corners*/ 
+    border: 0;
+    cursor: pointer; /* is the standard for buttons, but not for e.g. anchors */
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+    white-space: nowrap; /* prevent text from breaking into new line */
+    text-align: center; /* always display text in the center, default for buttons already, but e.g. for anchors not */
+    margin: 1rem 0rem; /* always separate btn vertically from other elements, horizontally not always */
+}
+
+.btn--primary{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn--primary:hover,
+.btn--primary:focus{
+    background-color: var(--color-primary-darkened);
+}
+
+.btn--secondary{
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus{
+    background-color: var(--color-secondary-darkened);
+}
+
+.btn--accent{
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn--accent:hover,
+.btn--accent:focus{
+    background-color: var(--color-accent-darkened);
+}
+
+.btn--outline{
+    border: 0.2rem solid var(--color-headings);
+    background-color: white;
+    color: var(--color-headings);
+}
+
+.btn--outline:hover{
+    background-color: var(--color-headings);
+    color: white;
+}
+
+.btn--block{
+    display: inline-block; /* in order to be able to attach this class to inline elements like anchors */
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px){
+    .btn{
+        font-size: 1.5rem;
+    }
 }
