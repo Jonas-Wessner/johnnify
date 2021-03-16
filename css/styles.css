@@ -8,6 +8,8 @@
     --color-accent-darkened: #ec3000;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    --color-border: #ccc;
+    --border-radius-full: 100000rem; /* set border radius to maximum round corners using a very large value*/
 }
 
 *,
@@ -192,7 +194,7 @@ a{
 
 /* Buttons */
 .btn{
-    border-radius: 100rem; /* choose a high number for maximum round corners*/ 
+    border-radius: var(--border-radius-full);
     border: 0;
     cursor: pointer; /* is the standard for buttons, but not for e.g. anchors */
     font-size: 1.8rem;
@@ -256,10 +258,10 @@ a{
     }
 }
 
-/* Inpouts */
+/* Inputs */
 .input{
-    border-radius: 100rem; /* set border radius to maximum round corners */
-    border: 0.1rem solid #ccc;
+    border-radius: var(--border-radius-full);
+    border: 0.1rem solid var(--color-border);
     color: var(--color-headings);
     font-size: 2rem;
     outline: none; /* get rid of default outline that browsers apply when clicked on */
@@ -274,4 +276,21 @@ a{
     .input{
         font-size: 1.5rem;
     }
+}
+
+/* Input-Groups */
+.input-group{
+    border: 0.1rem solid var(--color-border);
+    border-radius: var(--border-radius-full);
+    display: flex;
+}
+
+.input-group .btn{
+    margin: 0; /* smaller margin for btns inside input groups to move them closer to the border of the input group */
+}
+
+.input-group .input{
+    /* input-elements inside an input group shall not have the border that we normally want them to have */
+    border: 0;
+    flex-grow: 1; /* grow to take up all remaining space */
 }
