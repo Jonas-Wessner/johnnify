@@ -255,3 +255,23 @@ a{
         font-size: 1.5rem;
     }
 }
+
+/* Inpouts */
+.input{
+    border-radius: 100rem; /* set border radius to maximum round corners */
+    border: 0.1rem solid #ccc;
+    color: var(--color-headings);
+    font-size: 2rem;
+    outline: none; /* get rid of default outline that browsers apply when clicked on */
+    padding: 1.5rem 3.5rem;
+}
+
+::placeholder{
+    color:#cdcbd7; /* potentially used in inputs */
+}
+
+@media screen and (min-width: 1024px){
+    .input{
+        font-size: 1.5rem;
+    }
+}
