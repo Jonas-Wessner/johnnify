@@ -572,3 +572,47 @@ a{
     max-height: 100vh; /* make content visible */
     opacity: 100%;
 }
+
+/* Blocks */
+.block{
+    --padding-vertical: 6rem;
+    padding: var(--padding-vertical) 2rem;
+}
+
+.block__heading{
+    margin-top: 0; /* reset default margin for headings */
+}
+
+.block__header{
+    text-align: center;
+}
+
+.block--dark{
+    background: black;
+    color: #7b858b;
+}
+
+.block--dark .block__heading{
+    color: white;
+}
+
+.block--skewed-right{
+    /* can easily be created with clip-path generators like clippy */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    /* Padding has to be increased, because the skewed corner eats a bit of padding */
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+}
+
+.block--skewed-left{
+    /* can easily be created with clip-path generators like clippy */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    /* Padding has to be increased, because the skewed corner eats a bit of padding */
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+}
+
+/* Containers */
+
+.container{ 
+    width: 1140px;
+    margin: 0 auto; /* center horizontally */
+}
