@@ -254,6 +254,11 @@ a{
     width: 100%;
 }
 
+.btn--stretched{
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
 @media screen and (min-width: 1024px){
     .btn{
         font-size: 1.5rem;
@@ -482,5 +487,48 @@ a{
         /* center the quote in it's cell */
         margin-top: auto;
         margin-bottom: auto;
+    }
+}
+
+/* Callouts */
+.callout{
+    padding: 4rem;
+    border-radius: 0.5rem;
+}
+
+.callout__content{
+    text-align: center;
+}
+
+.callout--primary{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.callout__heading{
+    color: white;
+    margin-top: 0; /* reset default margin */
+    font-size: 3rem;
+}
+
+.callout .btn{
+    justify-self: center;
+    align-self: center;
+}
+
+@media screen and (min-width: 768px){
+    .callout{
+        /* only give button the space it needs, rest is allocated to content */
+        grid-template-columns: 1fr auto;
+    }
+
+    .callout__content{
+        text-align: left;
+    }
+
+    .callout .btn{ 
+        /* move button next to the content */
+        justify-self: start;
+        margin: 0 2rem;
     }
 }
