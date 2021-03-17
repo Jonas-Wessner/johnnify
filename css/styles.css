@@ -183,6 +183,10 @@ a{
     fill: var(--color-primary);
 }
 
+.icon--white{
+    fill:white;
+}
+
 .icon-container{
     align-items: center;
     background-color: #f3f9fa;
@@ -531,4 +535,40 @@ a{
         justify-self: start;
         margin: 0 2rem;
     }
+}
+
+/* Collapsibles */
+.collapsible__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* push content to the edges */
+}
+.collapsible__heading{
+    margin-top: 0; /* reset default margin of headings */
+    font-size: 3rem;
+}
+
+ /* initially collapsed state */
+.collapsible__icon{
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+}
+
+.collapsible__content{
+    /* hide the content, use max-height,
+       because we then can use animation when is expands */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+/* expanded state */
+.collapsible--expanded .collapsible__icon{
+    transform: rotate(0deg); /* not rotate -> back to initial state of sgv */
+}
+
+.collapsible--expanded .collapsible__content{
+    max-height: 100vh; /* make content visible */
+    opacity: 100%;
 }

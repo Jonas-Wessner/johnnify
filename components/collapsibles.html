@@ -1,0 +1,22 @@
+<!-- A collapsible consists of a a header and a body.
+     the header consists of a heading and an icon to indicate the state.
+     If the collapsible has the collapsible--expanded attribute attached,
+     the body is visible, otherwise not.
+     We use java-script-code to toggle this state on the click-event  -->
+
+<div class="collapsible">
+  <header class="collapsible__header">
+    <h2 class="collapsible__heading">Header Text Here</h2>
+    <svg class="icon icon--white collapsible__icon">
+      <use xlink:href="../icons/sprite.svg#chevron"></use>
+    </svg>
+  </header>
+  <body>
+    <div class="collapsible__content">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim assumenda
+      omnis, ipsum voluptas dignissimos iusto quae nulla praesentium animi eius.
+    </div>
+  </body>
+</div>
+
+<script src="../js/main.js"></script>
