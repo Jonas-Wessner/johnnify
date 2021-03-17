@@ -1,0 +1,31 @@
+<!-- A testimonial is essentially a card that is layed out
+     as a grid with the attribute grid--cols-2, which means it will
+     have 1 column on mobile and 2 columns on tablet or desktop.
+     The content of a testimonial is an image and a quote -->
+
+<div class="card testimonial grid grid--cols-2">
+  <img
+    src="../images/testimonial.jpg"
+    alt="A smiling, happy customer"
+    class="testimonial__image"
+  />
+  <blockquote class="quote">
+    <p class="quote__text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
+      maiores odit aliquid eum in atque odio modi voluptatibus dolor inventore.
+    </p>
+    <footer>
+      <div class="media">
+        <div class="media__image">
+          <svg class="icon icon--primary quote__line">
+            <use xlink:href="../icons/sprite.svg#line"></use>
+          </svg>
+        </div>
+        <div class="media__body">
+          <h3 class="media__title quote__author">John Smith</h3>
+          <p class="quote__organization">ABC Company</p>
+        </div>
+      </div>
+    </footer>
+  </blockquote>
+</div>

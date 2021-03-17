@@ -454,3 +454,33 @@ a{
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* Testimonials */
+.testimonial{
+    padding: 3rem;
+}
+
+.testimonial__image{
+    width: 100%; /* resize image to fill one column */
+}
+
+/* In this case we are on tablet or desktop and have a 2-col grid */
+@media screen and (min-width: 768px){
+    /* we have to little space on tablets for the quote,
+       so we need smaller text */
+    .testimonial .quote__text,
+    .testimonial .quote__author{
+        font-size: 2.4rem;
+    }
+
+    .testimonial .quote{
+        /* some space between the image and the quote */
+        margin-left: 6rem; 
+    }
+    
+    .quote{
+        /* center the quote in it's cell */
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
