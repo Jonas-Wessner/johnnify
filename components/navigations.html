@@ -1,0 +1,21 @@
+<!-- The navigation component is a collapsible with a list as collapsible__content
+     on desktop the list is displayed together with the header in one line,
+     the navigation__toggler is not visible and the body is always visible,
+    so essentially always visible-->
+
+<nav class="navigation collapsible">
+  <header class="collapsible__header">
+    <a href="/"><img src="../images/logo.svg" alt="" /></a>
+    <svg class="icon icon--white navigation__toggler">
+      <use xlink:href="../icons/sprite.svg#menu"></use>
+    </svg>
+  </header>
+  <ul class="list navigation__list collapsible__content">
+    <li class="navigation__item"><a href="">Hosting</a></li>
+    <li class="navigation__item"><a href="">VPS</a></li>
+    <li class="navigation__item"><a href="">Domain</a></li>
+    <li class="navigation__item"><a href="">Pricing</a></li>
+  </ul>
+</nav>
+
+<script src="../js/main.js"></script>

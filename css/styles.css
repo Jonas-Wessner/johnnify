@@ -149,6 +149,7 @@ a{
     list-style: none;   /* get rid of the default bullet points */
     padding-left: 0;    /* get rid of the default padding */ 
     color: var(--color-headings);
+    margin: 0;
 }
 
 .list--inline .list__item{
@@ -543,6 +544,7 @@ a{
     align-items: center;
     justify-content: space-between; /* push content to the edges */
 }
+
 .collapsible__heading{
     margin-top: 0; /* reset default margin of headings */
     font-size: 3rem;
@@ -615,4 +617,77 @@ a{
 .container{ 
     width: 1140px;
     margin: 0 auto; /* center horizontally */
+}
+
+/* Navigations */
+.navigation{
+    background-color: black;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+.navigation__list{
+    /* Because wrapping is enabled on the container
+       a width of 100% will make each item appear on a new line*/
+    width: 100%;
+}
+
+.navigation__item{
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid #222;
+}
+
+.navigation__item:last-child{
+    border-style: hidden; /* only show borders between elems */
+}
+
+.navigation__item > a,
+.navigation__toggler
+{
+    /* cannot set this on the item,
+       because it would be overridden by the more specific
+       rule that we have applied to links */
+    color: white;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.navigation__item > a:hover,
+.navigation__item > a:focus,
+.navigation__toggler:hover,
+.navigation__toggler:focus,
+.navigation.collapsible--expanded .navigation__toggler
+
+{
+    opacity: 1.0;
+}
+
+@media screen and (min-width: 768px){
+    /* align all items in one line overriding the
+       default style of the collapsible-component */
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* collapsible shall always be expanded, so manually set all properties here */
+    .navigation.collapsible .navigation__list.collapsible__content{
+        max-height: 100vh;
+        opacity: 1;
+    }
+
+    .navigation__toggler{
+        display: none;
+    }
+
+    .navigation__list{
+        display: flex;
+        width: auto;
+        font-size: 2rem;
+    }
+
+    .navigation__item{
+        border-style: none;
+    }
 }
