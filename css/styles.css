@@ -654,12 +654,17 @@ a{
     cursor: pointer;
 }
 
+.navigation__item > a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
 .navigation__item > a:hover,
 .navigation__item > a:focus,
 .navigation__toggler:hover,
 .navigation__toggler:focus,
 .navigation.collapsible--expanded .navigation__toggler
-
 {
     opacity: 1.0;
 }
