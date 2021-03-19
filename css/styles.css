@@ -321,6 +321,7 @@ a{
     /* hides overflowing contained element-parts such as the background of the card__header at the edges */
     overflow: hidden;
     box-shadow: 0 0 2rem 1rem #f3f3f3; /* offset-h, offset-v, blurring, spreading */
+    margin: 2rem;
 }
 
 .card__header,
@@ -347,6 +348,11 @@ a{
 }
 
 /* Plans */
+.plan{
+    width: 100%; /* fill container */
+    max-width: 50rem; /* plans only look good up to that level */
+}
+
 .plan__name{
     color:white;
     margin: 0; /* get rid of default margin that e.g. headings have */
@@ -451,7 +457,7 @@ a{
 }
 
 .quote__line{
-    /* moves the element 0.5rem upwards from its original position */
+    /* moves the element 0.5rem upwards from it+s original position */
     position: relative;
     bottom: 0.5rem;
 }
@@ -459,6 +465,7 @@ a{
 /* Grids */
 .grid{
     display: grid;
+    justify-items: center;
 }
 
 @media screen and (min-width: 768px){ /* Tablets */
@@ -760,5 +767,24 @@ a{
         /* Allow items to take up a minimum of 10rem and a max of 1 fraction,
            where the fraction is dependent on the number of elements */
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+}
+
+/* Plan Sections */
+.plans-section .plan{
+    transition: transform 0.2s ease-out;
+}
+
+.plans-section .plan:hover{
+    transform: scale(1.05);
+}
+
+.plans-section .plan--popular:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 1024px){
+    .plans-section .plan--popular{
+        transform: scale(1.05);
     }
 }
