@@ -728,6 +728,13 @@ a{
     margin: 2rem 0 5rem 0;
 }
 
+.hero picture{
+    /* center the image itself inside the picture tag */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero__image{
     width: 100%;
 }
@@ -760,6 +767,7 @@ a{
     font-size: 2rem;
     font-weight: bold; 
     justify-items: center; /* align horizontally */
+    align-items: center; /* align vertically */
 }
 
 @media screen and (min-width: 768px){
@@ -786,5 +794,35 @@ a{
 @media screen and (min-width: 1024px){
     .plans-section .plan--popular{
         transform: scale(1.05);
+    }
+}
+
+/* Features */
+.feature{
+    gap: 4rem 2rem;
+}
+
+.feature__heading{
+    margin-top: 2rem;
+}
+
+/* Feature Sections */
+.feature-section{
+    text-align: center;
+}
+
+.feature-section .feature{
+    margin: 5rem
+}
+
+.feature__tagline{
+    margin-bottom: 1rem; /* reduce bottom margin that initially comes from hero class */
+}
+
+@media screen and (min-width: 768px){
+    .feature:nth-of-type(even) .feature__content{
+        /* Alternate order of grid elements by placing the first element to the
+           second spot, which causes the second one to move to the first spot */
+        order: 2; 
     }
 }
