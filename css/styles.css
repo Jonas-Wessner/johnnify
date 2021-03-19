@@ -134,17 +134,6 @@ a{
     padding: 0.5rem 1.5rem;
 }
 
-@media screen and (min-width: 1024px){
-    .badge{
-        font-size: 1.5rem;
-    }
-
-    .badge--small{
-        font-size: 1.2rem;
-    }
-}
-
-
 /* Lists */
 .list{
     list-style: none;   /* get rid of the default bullet points */
@@ -212,6 +201,14 @@ a{
     white-space: nowrap; /* prevent text from breaking into new line */
     text-align: center; /* always display text in the center, default for buttons already, but e.g. for anchors not */
     margin: 1rem 0rem; /* always separate btn vertically from other elements, horizontally not always */
+}
+
+/* In case we use icons in buttons, determine their size and position */
+.btn .icon{
+    height: 2rem;
+    width: 2rem;
+    vertical-align: middle;
+    margin-right: 1rem;
 }
 
 .btn--primary{
@@ -300,12 +297,22 @@ a{
 
 .input-group .btn{
     margin: 0; /* smaller margin for btns inside input groups to move them closer to the border of the input group */
+    padding: 2rem 2rem; /* create more space for input by minimizing horizontal padding */
 }
 
 .input-group .input{
     /* input-elements inside an input group shall not have the border that we normally want them to have */
     border: 0;
-    flex-grow: 1; /* grow to take up all remaining space */
+    padding-right: 1; /* their should be less space between the input and the button */
+    /* Initially set the width to 0, then let it take up all the available space */
+    width: 0;
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 768px){
+    .input-group .btn{
+        padding: 2rem 4rem; /* on wider screens we can make the button longer */
+    }
 }
 
 /* Cards */
@@ -725,5 +732,33 @@ a{
 @media screen and (min-width: 768px){
     .hero{
         padding-top: 0;
+    }
+}
+
+/* Domain Sections */
+.domain-section .input-group{
+    border-style: none;
+    box-shadow: 0 0 3rem 2rem #e6ebee;
+    margin: 4rem 0;
+}
+
+.domain-section .block__header{
+    text-align: center;
+}
+
+.domain-section__prices{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* equally distribute space to cols */
+    grid-template-rows: repeat(2, 6rem); /* manage height of rows */
+    font-size: 2rem;
+    font-weight: bold; 
+    justify-items: center; /* align horizontally */
+}
+
+@media screen and (min-width: 768px){
+    .domain-section__prices{
+        /* Allow items to take up a minimum of 10rem and a max of 1 fraction,
+           where the fraction is dependent on the number of elements */
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
 }
