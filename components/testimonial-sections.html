@@ -1,0 +1,40 @@
+<!-- A Testimonial-Section is a regular block that includes
+     a testimonial that is also a container to be constraint to a max width.
+     So far this component does not have any individual classes -->
+
+<section class="block">
+  <header class="container block__header">
+    <h2>What our customers are saying</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius accusamus
+      libero.
+    </p>
+  </header>
+  <div class="container card testimonial grid grid--cols-2">
+    <img
+      src="../images/testimonial.jpg"
+      alt="A smiling, happy customer"
+      class="testimonial__image"
+    />
+    <blockquote class="quote">
+      <p class="quote__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
+        maiores odit aliquid eum in atque odio modi voluptatibus dolor
+        inventore.
+      </p>
+      <footer>
+        <div class="media">
+          <div class="media__image">
+            <svg class="icon icon--primary quote__line">
+              <use xlink:href="../icons/sprite.svg#line"></use>
+            </svg>
+          </div>
+          <div class="media__body">
+            <h3 class="media__title quote__author">John Smith</h3>
+            <p class="quote__organization">ABC Company</p>
+          </div>
+        </div>
+      </footer>
+    </blockquote>
+  </div>
+</section>
