@@ -2,10 +2,12 @@
      a header a paragraph and optionally further items in a body tag.
      The header is not allowed to stretch wider than 1140px in order to
      improve readability.
+     We can not apply the container-class to the section itself,
+     because we want the background to fill the entire page.
     -->
 
-<section class="container block block--dark block--skewed-left">
-  <header class="block__header">
+<section class="block block--dark block--skewed-left">
+  <header class="container block__header">
     <h2>Heading</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cupiditate
