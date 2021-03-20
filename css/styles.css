@@ -20,6 +20,11 @@
 }
 
 /* Typography */
+::selection{
+    background: var(--color-primary);
+    color: white;
+}
+
 html{
     /* browsers standard for font-size is 16px.
     We multiply this by 0.625 to get 10px and
@@ -52,6 +57,7 @@ h2{
 
 h3{
     size: 3rem;
+    font-weight: 500;
 }
 
 p{
@@ -134,13 +140,16 @@ a{
 .list{
     list-style: none;   /* get rid of the default bullet points */
     padding-left: 0;    /* get rid of the default padding */ 
-    color: var(--color-headings);
     margin: 0;
 }
 
 .list--inline .list__item{
     display: inline-block; /* show items in horizontal line but still allow defining margins */
     margin-right: 2rem;
+}
+
+.list--tick{
+    color: var(--color-headings);
 }
 
 .list--tick .list__item::before{ /* define the tick */
@@ -408,6 +417,7 @@ a{
 /* Media-Objects */
 .media{
     display: flex;
+    margin: 2rem 0;
 }
 .media__title{
     margin-top: 0; /* reset margin that e.g. headings have */
@@ -617,14 +627,14 @@ a{
 
 .block--skewed-right{
     /* can easily be created with clip-path generators like clippy */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
     /* Padding has to be increased, because the skewed corner eats a bit of padding */
     padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
 .block--skewed-left{
     /* can easily be created with clip-path generators like clippy */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
     /* Padding has to be increased, because the skewed corner eats a bit of padding */
     padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
@@ -824,5 +834,32 @@ a{
         /* Alternate order of grid elements by placing the first element to the
            second spot, which causes the second one to move to the first spot */
         order: 2; 
+    }
+}
+
+/* Showcase Sections */
+.showcase-section__image > img{
+    width: 100%;
+}
+
+@media screen and (min-width: 786px){
+    /* Starting from tablets we want the image to be on the right side and
+       always be at the same size. If the screen is to small we want the image
+       to go out of the screen on the left side */
+    .showcase-section__image{
+        justify-self: end; /* align with the right edge of grid */
+    }
+
+    .showcase-section__image > img{
+        width: auto; /* display image in actual size, maybe create intentional overflow */
+        max-width: 700px;
+    }
+
+    .showcase-section .grid--cols-2{
+        grid-template-columns: 50% 50%;
+    }
+
+    .showcase-section__header{
+        text-align: center; /* override the standard style for block__header where the headings are left aligned */
     }
 }

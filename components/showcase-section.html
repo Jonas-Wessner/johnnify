@@ -1,0 +1,81 @@
+<!-- The showcase section is a block that consists of
+     a header, a picture and a list of media objects.
+     On mobiles everything is in one column.
+     On tablets and desktops the picture is always 700px.
+     If there is not enough space for the picture we only want to show it partly
+     and let the rest be cut off on the left side of the screen. -->
+
+<section class="block block--dark block--skewed-right showcase-section">
+  <header class="container block__header showcase-section__header">
+    <h2>User-friendly Control Panel</h2>
+  </header>
+  <div class="container grid grid--cols-2">
+    <picture class="showcase-section__image">
+      <source
+        type="image/webp"
+        srcset="../images/ipad.webp 1x, ../images/ipad@2x.webp 2x"
+      />
+      <source
+        type="image/png"
+        srcset="../images/ipad.png 1x, ../images/ipad@2x.png 2x"
+      />
+      <img src="../images/ipad.png" alt="" />
+    </picture>
+    <ul class="list">
+      <li>
+        <div class="media">
+          <div class="media__image">
+            <svg class="icon icon--primary">
+              <use xlink:href="../icons/sprite.svg#snap"></use>
+            </svg>
+          </div>
+          <div class="media__body">
+            <h3 class="media__title">Easy Start & Managed Updates</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium, non, eius eligendi voluptatum doloribus officia, atque
+              laboriosam exercitationem quas quaerat adipisci quod! Animi eos
+              praesentium quae consequuntur, assumenda soluta illum!
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="media">
+          <div class="media__image">
+            <svg class="icon icon--primary">
+              <use xlink:href="../icons/sprite.svg#snap"></use>
+            </svg>
+          </div>
+          <div class="media__body">
+            <h3 class="media__title">Easy Start & Managed Updates</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium, non, eius eligendi voluptatum doloribus officia, atque
+              laboriosam exercitationem quas quaerat adipisci quod! Animi eos
+              praesentium quae consequuntur, assumenda soluta illum!
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="media">
+          <div class="media__image">
+            <svg class="icon icon--primary">
+              <use xlink:href="../icons/sprite.svg#snap"></use>
+            </svg>
+          </div>
+          <div class="media__body">
+            <h3 class="media__title">Easy Start & Managed Updates</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium, non, eius eligendi voluptatum doloribus officia, atque
+              laboriosam exercitationem quas quaerat adipisci quod! Animi eos
+              praesentium quae consequuntur, assumenda soluta illum!
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
