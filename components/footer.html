@@ -1,0 +1,58 @@
+<!-- The footer is a finished compound that is not going to be reused.
+     It consists of multiple sections. One of those sections is the brand (icon and copyright notice)
+     The others are lists of hyperlinks.
+     On mobile we want to display the lists as collapsibles, on desktop we want to display them all side by side
+-->
+
+<footer class="block block--dark footer">
+    <div class="container grid">
+      <section class="collapsible collapsible--expanded footer__section">
+        <header class="collapsible__header">
+          <h2 class="collapsible__heading footer__heading">Item1</h2>
+          <svg class="icon icon--white collapsible__icon">
+            <use xlink:href="../icons/sprite.svg#chevron"></use>
+          </svg>
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li><a href="#">Website Hosting</a></li>
+            <li><a href="#">Free Automated Wordpress</a></li>
+            <li><a href="#">Migrations</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="collapsible footer__section">
+        <header class="collapsible__header">
+          <h2 class="collapsible__heading footer__heading">Item 2</h2>
+          <svg class="icon icon--white collapsible__icon">
+            <use xlink:href="../icons/sprite.svg#chevron"></use>
+          </svg>
+        </header>
+        <div class="collapsible__content">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Service</a></li>
+        </ul>
+        </div>
+      </section>
+      <section class="collapsible footer__section">
+        <header class="collapsible__header">
+          <h2 class="collapsible__heading footer__heading">Item 3</h2>
+          <svg class="icon icon--white collapsible__icon">
+            <use xlink:href="../icons/sprite.svg#chevron"></use>
+          </svg>
+        </header>
+        <div class="collapsible__content">
+          <li><a href="#">What we do</a></li>
+          <li><a href="#">Improved Accessibility</a></li>
+          <li><a href="#">Green Day</a></li>
+        </ul>
+        </div>
+      </section>
+      <section class="footer__brand">
+        <img src="../images/logo.svg" alt="The company's logo" />
+        <p class="footer__copyright">Copyright 2021 Jonas Weßner</p>
+      </section>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
