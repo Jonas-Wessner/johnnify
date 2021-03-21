@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <nav class="navigation collapsible">
@@ -31,7 +32,7 @@
 
     <section class="block block--dark block--skewed-left hero">
       <div class="container grid grid--cols-2">
-        <header class="block__header hero__content">
+        <header class="block__header hero__content" data-aos="fade-right">
           <h1>Schnübär und Iselmaus</h1>
           <p class="hero__tagline">
             Wer nicht weiß wie man Sushi macht hat Pech gehabt!
@@ -40,7 +41,7 @@
             >Get Started</a
           >
         </header>
-        <picture>
+        <picture data-aos="zoom-in">
           <source
             type="image/webp"
             srcset="../images/banner.webp 1x, ../images/banner@2x.webp 2x"
@@ -62,7 +63,7 @@
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, cum?
           </p>
         </header>
-        <div class="input-group">
+        <div class="input-group" data-aos="fade-right">
           <input type="text" class="input" placeholder="type domain name" />
           <button class="btn btn--accent">
             <svg class="icon icon--white">
@@ -71,7 +72,7 @@
             Search
           </button>
         </div>
-        <ul class="list domain-section__prices">
+        <ul class="list domain-section__prices" data-aos="zoom-in">
           <li>.com $9</li>
           <li><span class="badge badge--secondary">.sg $10</span></li>
           <li>.space $11</li>
@@ -82,7 +83,7 @@
       </div>
     </section>
 
-    <div class="container grid grid--cols-3 plans-section">
+    <div class="container grid grid--cols-3 plans-section" data-aos="zoom-in">
       <div class="plan">
         <div class="card card--secondary">
           <header class="card__header">
@@ -270,7 +271,7 @@
         <h2>User-friendly Control Panel</h2>
       </header>
       <div class="container grid grid--cols-2">
-        <picture class="showcase-section__image">
+        <picture class="showcase-section__image" data-aos="fade-right">
           <source
             type="image/webp"
             srcset="../images/ipad.webp 1x, ../images/ipad@2x.webp 2x"
@@ -281,7 +282,7 @@
           />
           <img src="../images/ipad.png" alt="" />
         </picture>
-        <ul class="list">
+        <ul class="list" data-aos="flip-right">
           <li>
             <div class="media">
               <div class="media__image">
@@ -445,5 +446,9 @@
 </footer>
 
     <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
