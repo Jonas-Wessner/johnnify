@@ -1,3 +1,5 @@
+@import "./normalize.css"
+
 /* definition of custom variables */
 :root{
     --color-primary: #2584ff;
