@@ -48,15 +48,15 @@ h1, h2, h3{
 }
 
 h1{
-    size: 7rem; /* translates to 70px is user keeps the default font-size in browser */
+    font-size: 7rem; /* translates to 70px is user keeps the default font-size in browser */
 }
 
 h2{
-    size: 4rem;
+    font-size: 4rem;
 }
 
 h3{
-    size: 3rem;
+    font-size: 3rem;
     font-weight: 500;
 }
 
@@ -312,7 +312,7 @@ a:hover{
 .input-group .input{
     /* input-elements inside an input group shall not have the border that we normally want them to have */
     border: 0;
-    padding-right: 1; /* their should be less space between the input and the button */
+    padding-right: 1rem; /* their should be less space between the input and the button */
     /* Initially set the width to 0, then let it take up all the available space */
     width: 0;
     flex-grow: 1;
