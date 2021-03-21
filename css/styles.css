@@ -80,6 +80,10 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    transition: all 0.3s;
+}
+
 .link-arrow{
     color: var(--color-accent);
     text-transform: uppercase;
@@ -579,7 +583,7 @@ a{
  /* initially collapsed state */
 .collapsible__icon{
     transform: rotate(90deg);
-    transition: transform 0.3s;
+    transition: all 0.3s;
 }
 
 .collapsible__content{
@@ -632,19 +636,28 @@ a{
 
 .block--skewed-right{
     /* can easily be created with clip-path generators like clippy */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
     /* Padding has to be increased, because the skewed corner eats a bit of padding */
     padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
 .block--skewed-left{
     /* can easily be created with clip-path generators like clippy */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
     /* Padding has to be increased, because the skewed corner eats a bit of padding */
     padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
 @media screen and (min-width: 768px){
+    /* on wider screens we can skew the block to more percent,
+    because the angle increases due to the increasing screen width */
+    .block--skewed-right{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+    }
+
+    .block--skewed-left{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    }
 }
 
 /* Containers */
@@ -683,8 +696,11 @@ a{
        rule that we have applied to links */
     color: white;
     opacity: 0.5;
-    transition: opacity 0.3s;
     cursor: pointer;
+}
+
+.navigation__toggler{
+    transition: all 0.3s; /* rotation as well as opacity */
 }
 
 .navigation__item > a{
@@ -769,13 +785,14 @@ a{
 }
 
 .domain-section__prices{
+    align-items: center; /* align vertically */
+    color: var(--color-headings);
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* equally distribute space to cols */
-    grid-template-rows: repeat(2, 6rem); /* manage height of rows */
     font-size: 2rem;
     font-weight: bold; 
+    grid-template-columns: repeat(2, 1fr); /* equally distribute space to cols */
+    grid-template-rows: repeat(2, 6rem); /* manage height of rows */
     justify-items: center; /* align horizontally */
-    align-items: center; /* align vertically */
 }
 
 @media screen and (min-width: 768px){
@@ -817,6 +834,7 @@ a{
 /* Feature Sections */
 .feature-section{
     text-align: center;
+    margin-top: 10rem;
 }
 
 .feature-section .feature{
@@ -840,7 +858,7 @@ a{
     width: 100%;
 }
 
-@media screen and (min-width: 786px){
+@media screen and (min-width: 768px){
     /* Starting from tablets we want the image to be on the right side and
        always be at the same size. If the screen is to small we want the image
        to go out of the screen on the left side */
@@ -894,6 +912,7 @@ a{
     color: #777;
 }
 
+/* TODO: consider extracting styles and transitions for links on dark background */
 .footer a:hover{
     color: white ;
 }
@@ -944,4 +963,10 @@ a{
     .footer__heading{
         font-size: 2.5rem
     }
+}
+
+
+/* Styles for specific elements */
+#callout-ready-to-start{
+    transform: translateY(4rem);
 }
