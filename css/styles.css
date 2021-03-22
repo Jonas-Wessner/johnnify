@@ -611,7 +611,7 @@ a:hover {
 .collapsible--expanded .collapsible__content {
   max-height: 100vh; /* make content visible */
   transform: translateX(0%);
-  opacity: 100%;
+  opacity: 1;
 }
 
 /* Blocks */
@@ -735,7 +735,7 @@ a:hover {
   /* collapsible shall always be expanded, so manually set all properties here */
   .navigation.collapsible .navigation__list.collapsible__content {
     max-height: 100vh;
-    opacity: 100%;
+    opacity: 1;
   }
 
   .navigation__toggler {
@@ -947,7 +947,7 @@ a:hover {
            in the not-expanded state. Those where defined for animations when the content gets expanded.
            We do not use the animations here, because the content is always expanded on wide screens */
     max-height: 100%;
-    opacity: 100%;
+    opacity: 1;
     transform: translateX(0%);
   }
 
