@@ -1,1 +1,5 @@
+# 3rd party libraries
 node_modules/
+# created when parcel builds the project
+dist/
+.cache/
