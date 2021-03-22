@@ -464,6 +464,9 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+      $(window).on("load", function () {
+        AOS.refresh();
+      });
     </script>
   </body>
 </html>
