@@ -1,7 +1,7 @@
 # Building and Deploying a Website
 What I did here is mainly what is showed in the codewithmosh HTML5/CSS3-Course Part 3 in the Videos *42 Building for Production* and *44 Deployment*.
 
-## Setting up a Build Tool (Parcel)
+## Parcel - Setting up a Build Tool
 
 ### 1 Installing Node
 First we need to install node in order to be able to install packages using *npm*.
@@ -41,3 +41,21 @@ dist/
 .cache/
 ```
 
+### 5 Using Parcel
+```
+$ parcel build ./index.html
+```
+This command builds your project and puts all the files in the directory **dist/**.  
+Parcel minifies the project by removing all comments white-spaces and so on.  
+It also adds a random suffix to the names of our images in order to prevent browsers from caching this file and not reloading changes to our website properly.
+So this **dist/** is the actual folder that we want to deploy.
+
+```
+$ parcel ./index.html
+```
+This command is exactly like *parcel build* but it also runs a webserver at http://localhost:1234 on the **dist/** folder.
+
+When we deploy our website we want the server to automatically get the source code from our git-repository, then run parcel to make it ready for deployment and then publish those files.  
+So the local use of parcel is to make sure everything works, but we also want to use parcel somewhere else automatically when deploying our website. This is where *Continuos Deployment* Tools come into play.
+
+## Netlify - Setting up a Continuous Deployment Tool
