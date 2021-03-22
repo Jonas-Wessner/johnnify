@@ -947,7 +947,7 @@ a:hover {
            in the not-expanded state. Those where defined for animations when the content gets expanded.
            We do not use the animations here, because the content is always expanded on wide screens */
     max-height: 100%;
-    opacity: 1;
+    opacity: 100%;
     transform: translateX(0%);
   }
 
